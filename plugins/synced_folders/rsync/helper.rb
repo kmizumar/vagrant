@@ -63,7 +63,7 @@ module VagrantPlugins
 
         rsh = [
           "ssh -p #{ssh_info[:port]} " +
-          (machine.config.ssh.pty ? "-t -t " : "") +
+          (machine.config.ssh.pty ? "-tt " : "") +
           proxy_command +
           "-o StrictHostKeyChecking=no " +
           "-o UserKnownHostsFile=/dev/null",
